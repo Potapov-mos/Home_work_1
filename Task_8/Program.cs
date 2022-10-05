@@ -6,18 +6,9 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-// Console.Write("Введите число: ");
-// int number = Convert.ToInt32(Console.ReadLine());
-
-// int counter = 1;
-// while (counter <= number)
-// {
-//     Console.Write($"{counter} ");
-//     counter++;
-// }
 
 int counter = 1;
-bool not = true;
+bool negative = true;
 
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -27,11 +18,16 @@ while (counter <= number)
     if (counter % 2 != 1)
     {
         Console.Write($"{counter} ");
-        not = false;
+        negative = false;
     }
     counter++;
 }
-if (not)
+if (negative)
+    if (number <= 0)
+    {
+        Console.WriteLine("Введите положительное число от 1!");
+    }
+if (number == 1)
 {
-    Console.WriteLine("Введите натуральное число! ");
+    Console.WriteLine("В числе 1 нет четных чисел!");
 }
